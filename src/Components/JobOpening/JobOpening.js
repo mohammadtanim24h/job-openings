@@ -1,15 +1,18 @@
 import React from "react";
 
-const JobOpening = () => {
+const JobOpening = ({ opening }) => {
+    const { company, designation, location, min_experience, skills } = opening;
     return (
-        <div className="col col-lg-4 d-flex justify-content-center">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">
-                        This is a longer card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
+        <div className="col-lg-6 d-flex justify-content-center">
+            <div className="card" style={{ width: "18rem" }}>
+                <div className="card-body">
+                    <h4>{designation}</h4>
+                    <h5 className="text-secondary">{company}</h5>
+                    <p className="card-text mb-0">{location}</p>
+                    <p className="mb-0">
+                        {min_experience === 0
+                            ? "Fresher Opening"
+                            : min_experience + " year"}
                     </p>
                 </div>
             </div>
