@@ -1,10 +1,11 @@
 import React from "react";
+import './JobOpening.css';
 
 const JobOpening = ({ opening }) => {
     const { company, designation, location, min_experience, skills } = opening;
     return (
         <div className="col-lg-6 d-flex justify-content-center">
-            <div className="card" style={{ width: "20rem" }}>
+            <div className="card opening-card">
                 <div className="card-body">
                     <h4>{designation}</h4>
                     <h5 className="text-secondary">{company}</h5>
