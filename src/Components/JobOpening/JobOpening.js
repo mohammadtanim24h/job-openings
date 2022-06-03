@@ -14,6 +14,10 @@ const JobOpening = ({ opening }) => {
                             ? "Fresher Opening"
                             : "Minimum Experience: " + min_experience + " year"}
                     </p>
+                    <p>
+                        <span className="fw-bold">Skills Required:</span>{" "}
+                        {skills.join(", ")}
+                    </p>
                 </div>
             </div>
         </div>

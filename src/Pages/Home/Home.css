@@ -2,3 +2,12 @@
     color: #0f94fa;
     font-weight: 600;
 }
+
+@media screen and (max-width: 576px) {
+    .openings .applicant-profile {
+        order: 0;
+    }
+    .openings .job-openings {
+        order: 4;
+    }
+}

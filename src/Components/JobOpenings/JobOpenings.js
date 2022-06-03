@@ -4,9 +4,7 @@ import "./JobOpenings.css";
 
 const JobOpenings = () => {
     const [jobOpenings, setJobOpenings] = useState([]);
-    const [loading, setLoading] = useState(false);
     useEffect(() => {
-        setLoading(true);
         fetch("http://refertest.pythonanywhere.com/job/openings", {
             method: "GET",
             tid: 3441,
@@ -14,7 +12,6 @@ const JobOpenings = () => {
             .then((res) => res.json())
             .then(({ data }) => {
                 setJobOpenings(data);
-                setLoading(false);
             });
     }, []);
     return (
