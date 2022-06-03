@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Profile.css";
 
 const Profile = () => {
     const [profile, setProfile] = useState({});
@@ -8,12 +9,20 @@ const Profile = () => {
             uid: 136,
         })
             .then((res) => res.json())
-            .then((data) => setProfile(data));
+            .then(({ data }) => setProfile(data));
     }, []);
-    
+
+    console.log(profile);
+
     return (
-        <div>
-            <h3>Profile</h3>
+        <div className="profile">
+            <div className="text-center">
+                <img src={profile?.pictureUrl} alt="" />
+            </div>
+            <div className="text-center">
+                <h4 className="name">{profile?.name}</h4>
+                <p className="college">College: {profile?.college}</p>
+            </div>
         </div>
     );
 };
