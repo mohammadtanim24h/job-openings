@@ -8,7 +8,7 @@ const Home = () => {
         <div className="openings">
             <h2 className="text-center mt-3 title">Job Openings</h2>
             <div className="row g-5 mt-1">
-                <div className="col col-lg-4 d-flex justify-content-center">
+                <div className="col col-lg-4 d-flex justify-content-center h-50">
                     <Profile></Profile>
                 </div>
                 <div className="col col-lg-8">

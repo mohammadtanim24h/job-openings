@@ -18,13 +18,10 @@ const JobOpenings = () => {
             });
     }, []);
     return (
-        <div>
-            <h2 className="text-center text-secondary mb-3">Openings</h2>
-            <div className="row g-5">
-                {jobOpenings.map((opening) => (
-                    <JobOpening key={opening.id} opening={opening}></JobOpening>
-                ))}
-            </div>
+        <div className="row g-5">
+            {jobOpenings.map((opening) => (
+                <JobOpening key={opening.id} opening={opening}></JobOpening>
+            ))}
         </div>
     );
 };
