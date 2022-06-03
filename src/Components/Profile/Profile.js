@@ -22,8 +22,6 @@ const Profile = () => {
         return <Loading></Loading>;
     }
 
-    console.log(profile);
-
     return (
         <div className="profile">
             <div className="text-center">
