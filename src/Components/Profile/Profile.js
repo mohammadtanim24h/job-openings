@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Profile.css";
+import { AiFillEdit } from "react-icons/ai";
 
 const Profile = () => {
     const [profile, setProfile] = useState({});
@@ -21,6 +22,9 @@ const Profile = () => {
             <div className="text-center">
                 <h4 className="name">{profile?.name}</h4>
                 <p className="college">College: {profile?.college}</p>
+                <button className="btn btn-primary w-100 mt-2">
+                    Update Profile <AiFillEdit className="mb-1"></AiFillEdit>
+                </button>
             </div>
         </div>
     );

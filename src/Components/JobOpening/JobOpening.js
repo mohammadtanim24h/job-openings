@@ -1,7 +1,7 @@
 import React from "react";
 import "./JobOpening.css";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { MdDone } from "react-icons/md";
+import { AiOutlineFileDone } from "react-icons/ai";
 
 const JobOpening = ({ opening }) => {
     const { company, designation, location, min_experience, skills } = opening;
@@ -25,7 +25,7 @@ const JobOpening = ({ opening }) => {
                         {skills.join(", ")}
                     </p>
                     <button className="btn btn-primary mb-0">
-                        <MdDone></MdDone> Apply
+                        Apply <AiOutlineFileDone></AiOutlineFileDone>
                     </button>
                 </div>
             </div>
