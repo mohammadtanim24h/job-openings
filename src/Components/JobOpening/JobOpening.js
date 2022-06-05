@@ -7,11 +7,19 @@ const JobOpening = ({ opening }) => {
     const { company, designation, location, min_experience, skills } = opening;
     return (
         <div className="col-lg-6 d-flex justify-content-center">
-            <div className="card opening-card">
+            <div className="card opening-card position-relative">
+                {min_experience === 0 && (
+                    <span
+                        class="position-absolute top-0 start-50 translate-middle badge rounded-pill"
+                        style={{ backgroundColor: "red" }}
+                    >
+                        For Freshers
+                    </span>
+                )}
                 <div className="card-body">
                     <h4>{designation}</h4>
                     <h5 className="text-secondary">{company}</h5>
-                    <p className="card-text mb-0">
+                    <p className="card-text mb-1">
                         <FaMapMarkerAlt className="mb-1 me-1"></FaMapMarkerAlt>
                         {location}
                     </p>
@@ -41,8 +49,7 @@ const JobOpening = ({ opening }) => {
                             </svg>
                         </button>
                         <button className="btn btn-primary mb-0 ms-2">
-                            Save{" "}
-                            <AiOutlineHeart></AiOutlineHeart>
+                            Save <AiOutlineHeart></AiOutlineHeart>
                         </button>
                     </div>
                 </div>
